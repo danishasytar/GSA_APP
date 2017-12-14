@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+
+<!-- <div class="popupBox" on-click="presentAlert()"> -->
+<button id="escort-button18" ion-button color="light" block on-click="goToListOfFlight()">
+       Passenger Details
+  </button> 
+  <!-- </div> -->
+
+  <div class="popupBox" on-click="presentConfirm()">
+<button id="escort-button18" ion-button color="light" block >
+    Escort Status
+  </button> 
+  </div>
+
+ <!-- <button id="escort-button6" ion-button color="positive" block on-click="goToPopUp()" style="width:75px;" >
+    START
+  </button>
+  <button id="escort-button15" ion-button color="positive" block on-click="goToPassengerList()" style="width:75px;" >
+    DECLINE
+  </button>-->
+  <div class="spacer" style="width:300px;height:29px;" id="escort-spacer4"></div>
+  
+
+<ion-grid>
+<!--<ion-row>
+      <ion-col>
+  <a on-click="goToPopUp()">
+    <img src="assets/imgs/start.png" width="25" height="25"/>
+   </a>
+       </ion-col>
+      
+      <ion-col>
+  <a on-click="goToPassengerList()">
+    <img src="assets/imgs/stop.png" width="25" height="25"/>
+   </a>
+       </ion-col>
+      </ion-row>
+
+     <ion-row>
+          <ion-col>
+      <font size="2">START</font>
+        </ion-col>
+
+        <ion-col>
+      <font size="2">DECLINE</font>
+        </ion-col>
+     </ion-row>
+-->
+    <ion-row>
+      <ion-col>
+  <a on-click="goToFoodBeverages()">
+    <img src="assets/imgs/GL_Waffle_01.jpg" width="100" height="100"/>
+   </a>
+       </ion-col>
+      
+      <ion-col>
+  <a on-click="goToFacilities()">
+    <img src="assets/imgs/facilities.jpg" width="100" height="100"/>
+   </a>
+       </ion-col>
+      </ion-row>
+
+      <ion-row>
+          <ion-col>
+      <font size="2">Food & Beverages</font>
+        </ion-col>
+
+        <ion-col>
+      <font size="2">Facilities</font>
+        </ion-col>
+     </ion-row>
+      </ion-grid>
+
+  <button id="escort-button29" ion-button round color="positive" block on-click="goToPopUp()">
+    Task Complete
+  </button>
+</ion-content>

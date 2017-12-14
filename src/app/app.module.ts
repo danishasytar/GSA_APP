@@ -1,25 +1,56 @@
+import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
-
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { PassengerListPage } from '../pages/passenger-list/passenger-list';
+import { PassengerHandlingPage } from '../pages/passenger-handling/passenger-handling';
+import { ListOfFlightPage } from '../pages/list-of-flight/list-of-flight';
+import { EscortPage } from '../pages/escort/escort';
+import { PopUpPage } from '../pages/pop-up/pop-up';
+import { FoodBeveragesPage } from '../pages/food-beverages/food-beverages';
+import { FacilitiesPage } from '../pages/facilities/facilities';
+import { MeetingRoomPage } from '../pages/meeting-room/meeting-room';
+import { PassengerDetailsPage } from '../pages/passenger-details/passenger-details';
+import { LoginPage } from '../pages/login/login';
+
+
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    PassengerListPage,
+    PassengerHandlingPage,
+    ListOfFlightPage,
+    EscortPage,
+    PopUpPage,
+    FoodBeveragesPage,
+    FacilitiesPage,
+    MeetingRoomPage,
+    PassengerDetailsPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
+    
+      ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    PassengerListPage,
+    PassengerHandlingPage,
+    ListOfFlightPage,
+    EscortPage,
+    PopUpPage,
+    FoodBeveragesPage,
+    FacilitiesPage,
+    MeetingRoomPage,
+    PassengerDetailsPage,
+    LoginPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+     
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page10">
+  <button id="listOfFlight-button32" ion-button color="light" block>
+    Passenger Details
+  </button>
+  <ion-list id="listOfFlight-list8">
+    <ion-item id="listOfFlight-list-item-container1">
+      <div id="listOfFlight-markdown6" class="show-list-numbers-and-dots">
+        <p style="margin-top:0px;color:#000000;">
+           <ion-list >
+      <ion-item *ngFor="let passenger of passenger" >
+        <div *ngIf="passenger.id=='2'">
+        <ion-row> {{passenger.std}} </ion-row>
+         <ion-row>{{passenger.passenger_flight_no}}</ion-row>
+        {{passenger.departure}}
+
+
+          
+        </div>
+      </ion-item>
+    </ion-list> 
+        </p>
+      </div>
+    </ion-item>
+  </ion-list>
+  <button id="listOfFlight-button33" ion-button round color="positive" block on-click="goToEscort()">
+    CONFIRM
+  </button>
+</ion-content>

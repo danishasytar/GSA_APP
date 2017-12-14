@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+<ion-list>
+<div class="spacer" style="width:300px;height:29px;" id="escort-spacer4"></div>
+    <ion-item id="passengerList-select10">
+      <ion-label>
+        Flight Number
+      </ion-label>
+  
+      <ion-select [(ngModel)]="flight" name="rooms" placeholder="">
+        <ion-option value="flight1">MH601</ion-option>
+        <ion-option value="flight2">MH15</ion-option>
+        <ion-option value="flight3">MH350</ion-option>
+        <ion-option value="flight4">MH20</ion-option>
+      </ion-select>
+    </ion-item>
+<div class="spacer" style="width:300px;height:29px;" id="escort-spacer4"></div>
+
+<!--<div align="center">
+<a>
+Passenger List </a>
+</div>-->
+ <button id="passengerList-button11" ion-button color="light" block>
+    Passenger List
+  </button>
+
+</ion-list>
+
+    
+    <ion-item>
+      <div [ngSwitch]="flight">
+    <ion-list *ngSwitchCase="'flight1'">
+       <!-- <ion-item color="none" on-click="goToEscort()" id="passengerList-list-item4">
+      RENAKA RAMACHANDRAN
+      <ion-icon name="arrow-forward" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" id="passengerList-list-item5">
+      ONG WEI KAI
+      <ion-icon name="arrow-forward" item-right></ion-icon> -->
+      <!-- <ion-item color="none" on-click="goToEscort()" id="passengerList-list-item4">
+      RENAKA RAMACHANDRAN
+      <ion-icon name="arrow-forward" item-right></ion-icon> </ion-item> -->
+         
+      <ion-item *ngFor="let passenger of passenger" >
+        <div *ngIf="passenger.flighttype=='flight1'">
+         <ion-icon name="arrow-forward" on-click="goToEscort()" item-right></ion-icon> {{passenger.passenger_name}}
+          
+        </div>
+      </ion-item>
+    </ion-list>
+    
+
+    <ion-list *ngSwitchCase="'flight2'">
+      <ion-item *ngFor="let passenger of passenger" >
+        <div *ngIf="passenger.flighttype=='flight2'">
+         <ion-icon name="arrow-forward" on-click="goToEscort()" item-right></ion-icon> {{passenger.passenger_name}}
+          
+        </div>
+      </ion-item>
+    </ion-list>
+
+   <!-- <ion-list *ngSwitchCase="'flight3'">
+      <ion-item *ngFor="let passenger of passenger" >
+        <div *ngIf="passenger.flighttype=='flight3'">
+          {{passenger.passenger_name}}
+          <ion-icon name="arrow-forward" item-right></ion-icon>
+        </div>
+      </ion-item>
+    </ion-list> -->
+
+    <ion-list *ngSwitchCase="'flight3'">
+      <ion-item *ngFor="let passenger of passenger" >
+        <div *ngIf="passenger.flighttype=='flight4'">
+         <ion-icon name="arrow-forward" on-click="goToEscort()" item-right></ion-icon> {{passenger.passenger_name}}
+          
+        </div>
+      </ion-item>
+    </ion-list>
+
+
+   <ion-list *ngSwitchCase="'flight4'">
+      <ion-item *ngFor="let passenger of passenger" >
+        <div *ngIf="passenger.flighttype=='flight4'">
+         <ion-icon name="arrow-forward" on-click="goToEscort()" item-right></ion-icon> {{passenger.passenger_name}}
+          
+        </div>
+      </ion-item>
+    </ion-list>
+
+<!--<ion-list>
+<ion-item *ngFor="let passenger of passenger" >
+<p *ngIf="passenger.passenger_name=='flight1'">
+</p>
+<h4>  </h4> {{passenger.passenger_name}}
+<ion-icon name="arrow-forward" item-right></ion-icon>
+
+</ion-item>
+</ion-list>-->
+  </div>
+  </ion-item>    
+</ion-content>
+

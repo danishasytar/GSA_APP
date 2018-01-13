@@ -13,6 +13,8 @@ import { MeetingRoomPage } from '../pages/meeting-room/meeting-room';
 import { PassengerDetailsPage } from '../pages/passenger-details/passenger-details';
 import { LoginPage } from '../pages/login/login';
 
+import { OneSignal } from '@ionic-native/onesignal';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -55,6 +57,7 @@ import {HttpClientModule} from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
+    OneSignal,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

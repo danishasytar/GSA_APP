@@ -76,7 +76,8 @@ import { PassengerHandlingPage } from '../passenger-handling/passenger-handling'
 import { ListOfFlightPage } from '../list-of-flight/list-of-flight';
 import { FacilitiesPage } from '../facilities/facilities';
 import { MeetingRoomPage } from '../meeting-room/meeting-room';
-import { HttpClient } from '@angular/common/http';
+import { ApiProvider } from './../../providers/api/api';
+
 
 @Component({
   selector: 'page-passenger-list',
@@ -87,7 +88,7 @@ export class PassengerListPage {
 flight:string='flight1';
 
   passenger;
-  constructor(public navCtrl: NavController, private http: HttpClient) {
+  constructor(public api:ApiProvider, public navCtrl: NavController) {
 
     this.getData();
   }
@@ -120,9 +121,8 @@ flight:string='flight1';
 
   getData(){
       
-      var url = "https://unwilled-children.000webhostapp.com//api/passenger"
-      this.http.get(url + '/api/passenger',{} )
-           .subscribe(data => {
+      this.api.getdata('/api/passenger',{} )
+           .then(data => {
              console.log(data);
              this.passenger = data;
             

@@ -100,25 +100,27 @@ flightnumber;
       // }
 
       login(){
+
+         this.navCtrl.setRoot(PassengerHandlingPage);
     
-    if(this.flightnumber.toUpperCase() == "MH127" ){
-      this.navCtrl.setRoot(PassengerHandlingPage);
-      window.localStorage.setItem('flightnumber', this.flightnumber);
-    }
-    else if (this.flightnumber.toUpperCase()== "MH4") {
-        this.navCtrl.setRoot(PassengerHandlingPage);
-        console.log(this.flightnumber) 
-             window.localStorage.setItem('flightnumber', this.flightnumber);  
-    }
-    else{
-      let alert = this.alertCtrl.create({
-    title: 'Wrong Password  ',
-    subTitle: 'Please Try Again',
-    buttons: ['Dismiss']
-  });
-  alert.present();
-    }
+         // if(this.flightnumber.toUpperCase() == "MH127" ){
+         // this.navCtrl.setRoot(PassengerHandlingPage);
+         // window.localStorage.setItem('flightnumber', this.flightnumber);
+         // }
+         // else if (this.flightnumber.toUpperCase()== "MH4") {
+         // this.navCtrl.setRoot(PassengerHandlingPage);
+         // console.log(this.flightnumber) 
+         // window.localStorage.setItem('flightnumber', this.flightnumber);  
+         // }
+         // else{
+         // let alert = this.alertCtrl.create({
+         // title: 'Wrong Password  ',
+         // subTitle: 'Please Try Again',
+         // buttons: ['Dismiss']
+         // });
+         // alert.present();
+         // }
      
-  }
+     }
   }
 

@@ -19,6 +19,9 @@ import { OneSignal } from '@ionic-native/onesignal';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {HttpClientModule} from '@angular/common/http';
+import { ApiProvider } from '../providers/api/api';
+import { HTTP} from '@ionic-native/http';
+import { Device} from '@ionic-native/device';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import {HttpClientModule} from '@angular/common/http';
     StatusBar,
     SplashScreen,
     OneSignal,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    HTTP,
+    Device,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider
   ]
 })
 export class AppModule {}

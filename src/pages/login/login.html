@@ -64,7 +64,7 @@
 
   <img src="assets/imgs/download.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto; scale: 2.0;" />
 </ion-content>
-<ion-footer >
+<ion-footer padding no-shadow no-lines no-border >
  <h1 id="sampleComponent-heading1"  style="color:#FFD700; text-align: center; font-size: 2em;">
     Golden Lounge
   </h1>
@@ -77,14 +77,11 @@
   <div style="padding: 10px;">
     <ion-list id="login-list2">
       <ion-item id="login-input1" style="background-color: rgba(255, 255, 255, .8)">
-        <ion-label></ion-label>
-<ion-input type="" placeholder="Username" ></ion-input>
-</ion-item>
-<ion-item>
-        <ion-input type=""  [(ngModel)]="flightnumber"  placeholder="Password" ></ion-input>
+        <ion-input type="password" [(ngModel)]="username" placeholder="Username" ></ion-input>
       </ion-item>
-
-  
+      <ion-item>
+        <ion-input type="password"  [(ngModel)]="password" placeholder="Password" ></ion-input>
+      </ion-item>
     </ion-list>
    <!--  <button large id="login-button1" ion-button color="blue_opacity" block on-click="login()">
       Done
